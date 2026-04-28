@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1D414E" />
+  <meta name="description" content="About Vibe Check — a private, non-punitive reflection tool for working through moments of sexual uncertainty and confusion." />
+  <meta property="og:title" content="About — Vibe Check by SafeBAE" />
+  <meta property="og:description" content="A private, self-guided tool for reflection, accountability, and consent education." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='%2313848F'><path d='M247.63,47.89a8,8,0,0,0-7.52-7.52c-51.76-3-93.32,12.74-111.18,42.22-11.8,19.49-11.78,43.16-.16,65.74a71.34,71.34,0,0,0-14.17,27L98.33,159c7.82-16.33,7.52-33.35-1-47.49-13.2-21.79-43.67-33.47-81.5-31.25a8,8,0,0,0-7.52,7.52c-2.23,37.83,9.46,68.3,31.25,81.5A45.82,45.82,0,0,0,63.44,176,54.58,54.58,0,0,0,87,170.33l25,25V224a8,8,0,0,0,16,0V194.51a55.61,55.61,0,0,1,12.27-35,73.91,73.91,0,0,0,33.31,8.4,60.9,60.9,0,0,0,31.83-8.86C234.89,141.21,250.67,99.65,247.63,47.89ZM47.81,155.6C32.47,146.31,23.79,124.32,24,96c28.32-.24,50.31,8.47,59.6,23.81,4.85,8,5.64,17.33,2.46,26.94L61.65,122.34a8,8,0,0,0-11.31,11.31l24.41,24.41C65.14,161.24,55.82,160.45,47.81,155.6Zm149.31-10.22c-13.4,8.11-29.15,8.73-45.15,2l53.69-53.7a8,8,0,0,0-11.31-11.31L140.65,136c-6.76-16-6.15-31.76,2-45.15,13.94-23,47-35.82,89.33-34.83C232.94,98.34,220.14,131.44,197.12,145.38Z'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <title>About — Vibe Check by SafeBAE</title>
+  <style>
+    :root{
+      --sb-light:#D1FEFF;
+      --sb-teal:#13848F;
+      --sb-mint:#15FFC8;
+      --sb-deep:#1D414E;
+      --sb-coral:#E07A5F;
+
+      --bg: var(--sb-deep);
+      --text: var(--sb-light);
+      --muted: rgba(209,254,255,.85);
+      --border: rgba(209,254,255,.18);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:14px;
+      --radius-md:10px;
+      --radius-pill:999px;
+
+      --dur-fast: 150ms;
+      --dur-normal: 250ms;
+
+      --text-xl: clamp(18px, 5vw, 21px);
+      --text-2xl: clamp(22px, 6vw, 28px);
+
+      --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    *{ box-sizing:border-box; }
+    button, a, [role="button"], summary { -webkit-tap-highlight-color: transparent; }
+
+    body{
+      margin:0;
+      font-family: var(--font-body);
+      background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(21,255,200,.18), transparent 55%),
+        radial-gradient(1000px 700px at 90% 20%, rgba(19,132,143,.22), transparent 60%),
+        radial-gradient(900px 600px at 40% 100%, rgba(209,254,255,.10), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      padding: 28px 14px 60px;
+    }
+
+    .app{ width: min(540px, 100%); }
+
+    .topbar{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:14px; flex-wrap:wrap; }
+    .topbarRow{ display:flex; align-items:center; justify-content:space-between; width:100%; gap:12px; }
+    .brand{ display:flex; align-items:center; gap:11px; position:relative; }
+
+    .logo svg{
+      width:30px; height:40px;
+      transform-origin: 50% 100%;
+      animation: grow 7s ease-in-out infinite;
+      filter: drop-shadow(0 0 8px rgba(21,255,200,.35));
+    }
+    @keyframes grow {
+      0%   { transform: scale(0.90) translateY(3px); opacity: .88; }
+      50%  { transform: scale(1.00) translateY(0px); opacity: 1; }
+      100% { transform: scale(0.90) translateY(3px); opacity: .88; }
+    }
+
+    .brandText{ display:flex; flex-direction:column; gap:1px; }
+    .brand .title{
+      font-weight: 900;
+      font-size: var(--text-xl);
+      letter-spacing: 1.2px;
+      line-height: 1;
+      color: #15FFC8;
+      position: relative;
+    }
+    .brand .title::after{
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #15FFC8, rgba(21,255,200,.3), transparent);
+      background-size: 200% 100%;
+      animation: underlineShift 8s ease-in-out infinite;
+      border-radius: 2px;
+      filter: drop-shadow(0 0 4px rgba(21,255,200,.4));
+    }
+    @keyframes underlineShift {
+      0%   { background-position: 200% 0; opacity: .35; }
+      50%  { background-position: 0% 0; opacity: .7; }
+      100% { background-position: 200% 0; opacity: .35; }
+    }
+    .brandBy{
+      font-size: 8.5px;
+      font-weight: 600;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: rgba(209,254,255,.72);
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+    .brandSub{
+      font-size: 8.5px;
+      font-weight: 600;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: rgba(209,254,255,.72);
+      margin-top: 4px;
+      padding-left: 1px;
+    }
+
+    .card{
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .h1{ font-size: var(--text-2xl); margin:0 0 10px; font-weight: 900; line-height:1.2; }
+    .p{ margin:0 0 12px; color: var(--muted); line-height:1.55; }
+    .grid{ display:grid; gap:10px; margin-top: 16px; }
+
+    .btn{
+      appearance:none; border:none;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      font-weight: 800;
+      cursor:pointer;
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      border: 1px solid var(--border);
+      transition: transform .06s ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease;
+      text-align:center;
+      width:100%;
+      text-decoration:none;
+      display:inline-block;
+    }
+    .btn:hover{
+      background: rgba(21,255,200,.18);
+      border: 1px solid rgba(21,255,200,.65);
+      box-shadow: 0 0 8px rgba(21,255,200,.35);
+      color: var(--sb-light);
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btnSmall{ padding:10px 12px; border-radius: var(--radius-pill); font-size: 12px; width:auto; }
+    .btnPrimary{
+      background: linear-gradient(135deg, rgba(21,255,200,.98), rgba(19,132,143,.85));
+      color:#041114; border: 1px solid rgba(209,254,255,.24);
+      box-shadow: 0 0 16px rgba(21,255,200,.20);
+      font-weight: 900;
+      letter-spacing: .3px;
+    }
+    .btnPrimary:hover{
+      box-shadow: 0 0 22px rgba(21,255,200,.35);
+      background: linear-gradient(135deg, rgba(21,255,200,1), rgba(19,132,143,.92));
+      color:#041114;
+    }
+    .btnBack{
+      width:auto;
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      color: var(--muted);
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      margin-bottom: 8px;
+      text-align:left;
+    }
+    .btnBack:hover{ color: var(--text); background: rgba(255,255,255,.08); }
+
+    details.styled{
+      margin-top: 16px;
+      border: 1px solid rgba(209,254,255,.14);
+      border-radius: var(--radius-md);
+      background: rgba(0,0,0,.15);
+      overflow: hidden;
+      transition: border-color var(--dur-normal) ease;
+    }
+    details.styled[open]{ border-color: rgba(21,255,200,.25); }
+    details.styled summary{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--sb-light);
+      line-height: 1.35;
+      list-style: none;
+      user-select: none;
+    }
+    details.styled summary::-webkit-details-marker{ display:none; }
+    details.styled summary::after{
+      content: '\25BE';
+      font-size: 12px;
+      color: rgba(209,254,255,.5);
+      margin-left: auto;
+      transition: transform var(--dur-normal) ease;
+    }
+    details.styled[open] summary::after{ transform: rotate(180deg); }
+    details.styled .detailBody{
+      padding: 0 16px 16px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    details.styled .detailBody p{ margin: 0 0 10px; }
+    details.styled .detailBody p:last-child{ margin-bottom: 0; }
+    details.styled .detailBody b{ color: var(--sb-light); }
+    details.styled .detailBody a{ color: var(--sb-light); }
+
+    .footer{ margin-top:12px; display:flex; justify-content:space-between; gap:10px; font-size:12px; color: var(--muted);}
+    a.link{ color: var(--sb-mint); text-decoration:none; font-weight:800;}
+    a.link:hover{ text-decoration:underline;}
+
+    .copyright{ text-align:center; margin-top:14px; font-size:12px; color: var(--muted); }
+    .safebaeLink{ text-align:center; margin-top:18px; }
+    .safebaeLink img{
+      max-width: 280px;
+      width: 80%;
+      height: auto;
+      opacity: 0.9;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="topbar" role="banner">
+      <div class="topbarRow">
+        <div class="brand">
+          <div class="logo">
+            <svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+              <line x1="50" y1="64" x2="50" y2="130" stroke="#15FFC8" stroke-width="6" stroke-linecap="round" />
+              <circle cx="50" cy="50" r="14" fill="#15FFC8" />
+              <g fill="#D1FEFF">
+                <ellipse cx="50" cy="20" rx="10" ry="18"/>
+                <ellipse cx="50" cy="80" rx="10" ry="18"/>
+                <ellipse cx="20" cy="50" rx="18" ry="10"/>
+                <ellipse cx="80" cy="50" rx="18" ry="10"/>
+                <ellipse cx="30" cy="30" rx="12" ry="18" transform="rotate(-45 30 30)"/>
+                <ellipse cx="70" cy="30" rx="12" ry="18" transform="rotate(45 70 30)"/>
+                <ellipse cx="30" cy="70" rx="12" ry="18" transform="rotate(45 30 70)"/>
+                <ellipse cx="70" cy="70" rx="12" ry="18" transform="rotate(-45 70 70)"/>
+              </g>
+            </svg>
+          </div>
+          <div class="brandText">
+            <div class="title">Vibe Check <span class="brandBy">by SafeBAE</span></div>
+            <div class="brandSub">Reflection &amp; Accountability</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="card" role="main">
+      <a href="index (42).html" class="btn btnBack" aria-label="Back to Vibe Check">&#8592; Back</a>
+
+      <h1 class="h1">About Vibe Check</h1>
+
+      <p class="p">Vibe Check is a private reflection tool for moments of uncertainty &mdash; when you&rsquo;re wondering whether a boundary may have been crossed or someone may have been hurt.</p>
+
+      <p class="p">Instead of judging or labeling you, Vibe Check helps you slow down and think through what happened. It guides you step by step, helping you look at behaviors, reactions, and the context around them. Along the way, you&rsquo;ll reflect on things that can shape how a situation is experienced, including consent, pressure, alcohol, miscommunication, and power dynamics.</p>
+
+      <p class="p">Vibe Check doesn&rsquo;t collect personal information, make legal decisions, or report anything. It&rsquo;s a space to think honestly about a situation, understand it more clearly, and consider what responsibility and next steps might look like &mdash; with resources to support safer decisions.</p>
+
+      <details class="styled">
+        <summary><i class="ph-bold ph-lock-simple" style="font-size:16px;"></i> Privacy</summary>
+        <div class="detailBody">
+          <p><b>No personal data is collected.</b> Vibe Check does not ask for your name, email, location, or any identifying information.</p>
+          <p><b>Nothing is stored.</b> Your responses, reflections, and choices exist only in your browser while you&rsquo;re using the tool. When you close the tab, everything is gone.</p>
+          <p><b>No personal data is sent anywhere.</b> There are no accounts, no cookies, and no server. Your responses and reflections stay in your browser. We use <a href="https://www.goatcounter.com" target="_blank" rel="noopener noreferrer">GoatCounter</a>, a privacy-friendly analytics tool, to count page visits &mdash; it does not track individuals, use cookies, or collect personal information.</p>
+          <p><b>Nothing is reported.</b> Vibe Check does not contact authorities, schools, employers, or anyone else. It is not a reporting tool.</p>
+        </div>
+      </details>
+
+      <div class="grid">
+        <a href="index (42).html" class="btn btnPrimary">Back to Vibe Check</a>
+      </div>
+    </main>
+
+    <div class="footer">
+      <div>No Account. No Names. No Judgment. Just Answers.</div>
+      <div><a class="link" href="index (42).html">Home</a></div>
+    </div>
+
+    <div class="copyright">&copy; 2026 Vibe Check by SafeBAE</div>
+
+    <div class="safebaeLink">
+      <a href="https://safebae.org" target="_blank" rel="noopener noreferrer">
+        <img src="safebae-logo.png" alt="SafeBAE Logo" />
+      </a>
+    </div>
+  </div>
+</body>
+</html>
